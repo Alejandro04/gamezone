@@ -13,12 +13,15 @@ export default function Home({ navigation }) {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.titleText}>Home Screen</Text>
             <FlatList
                 data={reviews}
                 renderItem={({ item }) => (
                     <TouchableOpacity onPress={() => navigation.navigate('ReviewDetails', item)}>
-                        <Text style={styles.titleText}> {item.title} </Text>
+                        <View style={styles.card}>
+                            <View style={styles.cardContent}>
+                                <Text style={styles.titleText}> {item.title} </Text>
+                            </View>
+                        </View>
                     </TouchableOpacity>
                 )}
             />
@@ -33,5 +36,19 @@ const styles = StyleSheet.create({
     titleText: {
         fontFamily: 'nunito-bold',
         fontSize: 18
+    },
+    card: {
+        borderRadius: 6,
+        elevation: 3,
+        backgroundColor: '#fff',
+        shadowOffset: {width: 1, height: 1},
+        shadowOpacity: 0.3,
+        shadowColor: 2,
+        marginHorizontal: 4,
+        marginVertical: 6
+    },
+    cardContent: {
+        marginHorizontal: 18,
+        marginVertical: 10
     }
 })
