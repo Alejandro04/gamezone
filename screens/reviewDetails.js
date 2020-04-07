@@ -3,15 +3,11 @@ import { StyleSheet, View, Text, Button } from 'react-native'
 
 export default function ReviewDetails({ navigation }){
 
-    const pressHandler = () => {
-        navigation.navigate('Home')
-    }
-
     return (
         <View styles={styles.container}>
-            <Text>ReviewDetails Screen</Text>
-            <Button title='go to home screen'
-            onPress={pressHandler}/>
+            <Text> {navigation.getParam('title')} </Text>
+            <Text> {navigation.getParam('body')} </Text>
+            <Text> {navigation.getParam('rating')} </Text>
         </View>
     )
 }
