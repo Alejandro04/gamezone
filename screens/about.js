@@ -5,7 +5,7 @@ export default function About() {
     return (
         <View style={styles.card}>
             <View style={styles.cardContent}>
-                <Text> About </Text>
+                <Text>About</Text>
             </View>
         </View>
     )
