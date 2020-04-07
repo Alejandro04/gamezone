@@ -6,9 +6,9 @@ export default function Home({ navigation }) {
 
     const [reviews, setReviews] = useState([
         { title: 'FIFA 2020', rating: 5, body: 'lorem ipsum', key: '1' },
-        { title: 'F1 2020', rating: 5, body: 'lorem ipsum', key: '2' },
-        { title: 'Call Of Duty', rating: 5, body: 'lorem ipsum', key: '3' },
-        { title: 'Counter Strike', rating: 5, body: 'lorem ipsum', key: '4' },
+        { title: 'F1 2020', rating: 3, body: 'lorem ipsum', key: '2' },
+        { title: 'Call Of Duty', rating: 2, body: 'lorem ipsum', key: '3' },
+        { title: 'Counter Strike', rating: 1, body: 'lorem ipsum', key: '4' },
     ])
 
     return (
