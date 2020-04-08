@@ -19,7 +19,6 @@ export const globalStyles = StyleSheet.create({
         padding: 10,
         fontSize: 18,
         borderRadius: 6,
-        marginBottom: 20
     },
     card: {
         borderRadius: 6,
@@ -43,6 +42,13 @@ export const globalStyles = StyleSheet.create({
         borderTopWidth: 1,
         borderTopColor: '#eee',
     },
+    errorText: {
+        color: 'crimson',
+        fontWeight: 'bold',
+        marginBottom: 10,
+        marginTop: 6,
+        textAlign: 'center',
+      },
 });
 
 export const images = {
