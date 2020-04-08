@@ -1,29 +1,13 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { View, Text } from 'react-native'
+import { globalStyles } from '../styles/global'
 
 export default function About() {
     return (
-        <View style={styles.card}>
-            <View style={styles.cardContent}>
+        <View style={globalStyles.card}>
+            <View style={globalStyles.cardContent}>
                 <Text>About</Text>
             </View>
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-    card: {
-        borderRadius: 6,
-        elevation: 3,
-        backgroundColor: '#fff',
-        shadowOffset: { width: 1, height: 1 },
-        shadowOpacity: 0.3,
-        shadowColor: 2,
-        marginHorizontal: 4,
-        marginVertical: 6
-    },
-    cardContent: {
-        marginHorizontal: 18,
-        marginVertical: 10
-    }
-})

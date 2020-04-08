@@ -34,6 +34,14 @@ export const globalStyles = StyleSheet.create({
         marginHorizontal: 18,
         marginVertical: 10
     },
+    rating: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        paddingTop: 16,
+        marginTop: 16,
+        borderTopWidth: 1,
+        borderTopColor: '#eee',
+    },
 });
 
 export const images = {
