@@ -8,10 +8,18 @@ export default function Home({ navigation }) {
     const [modalOpen, setModalOpen] = useState(false);
     const [reviews, setReviews] = useState([
         { title: 'FIFA 2020', rating: 5, body: 'lorem ipsum', key: '1' },
-        { title: 'F1 2020', rating: 3, body: 'lorem ipsum', key: '2' },
-        { title: 'Call Of Duty', rating: 2, body: 'lorem ipsum', key: '3' },
-        { title: 'Counter Strike', rating: 1, body: 'lorem ipsum', key: '4' },
-    ])
+        { title: 'CALL DUTTY', rating: 4, body: 'lorem ipsum', key: '2' },
+        { title: 'F1', rating: 3, body: 'lorem ipsum', key: '3' },
+    ]);
+
+    const addReview = (review) => {
+        review.key = Math.random().toString();
+        setReviews((currentReviews) => {
+            return [review, ...currentReviews];
+        });
+        setModalOpen(false);
+    };
+
 
     return (
         <View style={globalStyles.container}>
@@ -23,7 +31,7 @@ export default function Home({ navigation }) {
                         style={{ ...globalStyles.modalToggle, ...globalStyles.modalClose }}
                         onPress={() => setModalOpen(false)}
                     />
-                    <ReviewForm />
+                    <ReviewForm addReview={addReview} />
                 </View>
             </Modal>
 
